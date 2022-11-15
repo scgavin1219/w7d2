@@ -1,0 +1,21 @@
+<h1>Welcome, MusicHead!</h1>
+
+<form action="<%= users_url %>" method="POST">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<br>
+
+<label for="email">Email: </label>
+<input type="text" name="user[email]" placeholder="email">
+<br>
+
+<label for="password">Password: </label>
+<input type="password" name="user[password]" placeholder="password"> 
+<br>
+<br>
+<button>Submit</button>
+
+
+
+
+
+</form>
