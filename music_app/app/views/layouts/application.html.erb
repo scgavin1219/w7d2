@@ -14,7 +14,14 @@
       <li>Artists</li>
       <li>Events</li>
     </ul>
-    
+    <% if logged_in? %>
+    <h4>Welcome, <%= current_user.email %></h4>
+      <form action="<%= session_url %>" method="POST" >
+      <input type="hidden" name="_method" method="DELETE">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <button>logout</button>
+      </form>
+    <% end %>
   </header>
   <body>
     <%= yield %>
